@@ -1,3 +1,10 @@
+/* 服务器字体 */
+@font-face {
+    font-family: cmd;
+    src: url(cmdysj.ttf);
+}
+
+/* 主体样式 */
 body {
     font-family: cmd;
     line-height: 1.6;
@@ -6,7 +13,7 @@ body {
     background: #353535;
     color: #333;
 }
-
+/* 导航栏 */
 header {
     background: #929292;
     color: #000000;
@@ -15,11 +22,22 @@ header {
     position:fixed;
     width: 100%;
     top:0px;
+    z-index: 100;
 }
-.place{
-    width: 100%;
-    height:78px;
+
+header a{
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
 }
+
+header a:hover{
+    color: #a2f9ff;
+    transition-property: color;
+    transition-duration: 200ms;
+    transition-timing-function: linear;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -34,7 +52,41 @@ nav ul li a {
     color: #000000;
     text-decoration: none;
 }
+/* 左下角菜单 */
+.top{
+    height: 40px;
+    width: 60px;
+    background-color: #929292;
+    border-radius: 20px;
+    position: fixed;
+    top: 93%;
+    left:-70px;
+    padding: 0px 20px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    animation:navin 5000s ease;
+    z-index: 10;
+    color: #fff;
+}
 
+.top a{
+    position: absolute;
+    left:27px;
+    top:8px;
+    text-decoration: none;
+    color:#ffffff;
+}
+.top:hover{
+    animation:navout 5000s ease;    
+}
+/* 占位块 */
+.place{
+    width: 100%;
+    height:78px;
+}
+/* 首页内容块 */
 .main{
     height: 600px;
     background-image: url(home.png);
@@ -44,9 +96,9 @@ nav ul li a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.884);
 }
-
+/* 底部版权信息 */
 footer {
-    background: #333;
+    background: #353535;
     color: #fff;
     text-align: center;
     padding: 10px 20px;
@@ -55,24 +107,19 @@ footer {
 footer p {
     margin: 0;
 }
-
+/* 定义动画 */
 @keyframes navout{
     0% {transform:translate(0px,0px)}
-    0.01%{transform:translate(490px,0px)}
-    100%{transform:translate(490px,0px)}
+    0.01%{transform:translate(70px,0px)}
+    100%{transform:translate(70px,0px)}
 }
 
 @keyframes navin{
-    0% {transform:translate(490px,0px)}
+    0% {transform:translate(70px,0px)}
     0.01%{transform:translate(0px,0px)}
     100%{transform:translate(0px,0px)}
 }
-
-@font-face {
-    font-family: cmd;
-    src: url(cmdysj.ttf);
-}
-
+/* 定义超链接和按钮样式 */
 .but{
     color: #eeec76;
     border-radius: 10px;
@@ -92,20 +139,19 @@ footer p {
     transition-timing-function: linear;
 
 }
-
+/* 主页大标题 */
 div .title{
     font-size: 40px;
     font-weight: 75;
 }
-
+/* 反馈页主体 */
 .feedback{
-    height: 400px;
-    background-color: #333;
-    background-position: center;
+    height: 300px;
     text-align: center;
-    color:#e6e6e6;
-}
+    color: #fff;
 
+}
+/* 输入框美化 */
 input{
     height:30px;
     width:600px;
@@ -114,62 +160,126 @@ input{
     border-radius: 4px;
     color:#fff;
 }
-
-.long{
-    width: 600px;
-    height: 90px;
-    background-color: #00000000;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    color:#fff;
-}
-
-.complete{
-    width: 100px;
-    height: 32px;
-    background-color: #00000000;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    color:#fff;
-    transition-property: background-color;
-    transition-duration: 300ms;
-    transition-timing-function: linear;
-}
-
-.complete:hover{
-    background-color: #ffffff4d;
-    transition-property: background-color;
-    transition-duration: 300ms;
-    transition-timing-function: linear;
-}
-
+/* 游戏列表 */
 .game{
     list-style-type: none;
     text-decoration: none;
 }
+/* 列表超链接 */
 ul a{
     color: #eeec76;
     text-decoration: none;
 }
-
+/* 项目页侧边槽 */
 .bar{
     height:1800px;
     width:200px;
     background-color: #686868;
     position: fixed;
     top:78px;
+    z-index: 9;
 }
 
-img{
-    align-items: center;
-}
-
+/* 二维码 */
 .QR{
-    height: 600px;
-    background-image: url(QR.png);
+    height: 305px;
+    width: 300px;
+    background-image: url(QR2.png);
+    background-position: right;
+    position: absolute;
+    top:157px;
+    right: 540px;
+    border-radius: 20px;
+}
+/* Winter Angle 项目有关内容 */
+#winta{
+    background-image: url(1.png);
     background-repeat: no-repeat;
-    background-position: center;
+    height: 563px;
+    width: 1000px;
+    position: relative;
+    left: 250px;
+    top: 30px;
+    border-radius: 20px;
+}
+
+.winta{
+    height: 523px;
+    width: 460px;
+    position: absolute;
+    left: 1300px;
+    border-radius: 20px;
+    top: 108px;
+    background-color: #929292;
+    padding: 20px;
     text-align: center;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.884);
+    color: #a2f9ff;
+}
+
+.introwint{
+    height: 353px;
+    width:1491px;
+    padding: 30px;
+    background-color: #929292;
+    border-radius: 20px;
+    color: #ffffff;
+    position: relative;
+    left:250px;
+    top:80px;
+    line-height: 60px;
+}
+/* 雾绕三山项目有关内容 */
+#wrss{
+    background-color: #fff;
+    background-repeat: no-repeat;
+    height: 563px;
+    width: 1000px;
+    position: relative;
+    left: 250px;
+    top: 120px;
+    border-radius: 20px;
+}
+
+.wrss{
+    height: 523px;
+    width: 460px;
+    position: absolute;
+    left: 1300px;
+    border-radius: 20px;
+    top: 1172px;
+    background-color: #929292;
+    padding: 20px;
+    text-align: center;
+    color: #a2f9ff;
+}
+
+.introwrss{
+    height: 353px;
+    width:1491px;
+    padding: 30px;
+    background-color: #929292;
+    border-radius: 20px;
+    color: #ffffff;
+    position: relative;
+    left:250px;
+    top:170px;
+    line-height: 60px;
+}
+/* 捐赠页内容 */
+.dona{
+    height: 265px;
+    width: 360px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #79a6c0;
+    position: relative;
+    left: 500px;
+    border-radius: 20px;
+}
+/* 按钮样式 */
+button{
+    background-color: #00000000;
+    font-family: cmd;
+    font-size: 15px;
 }
