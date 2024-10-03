@@ -88,13 +88,15 @@ nav ul li a {
 }
 /* 首页内容块 */
 .main{
-    height: 600px;
-    background-image: url(home.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 550px;
+    width: 1000px;
+    background-color: #6b6b6b;
+    border-radius: 20px;
+    position: relative;
+    left:460px;
     text-align: center;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.884);
+    color: #ffffff;
 }
 /* 底部版权信息 */
 footer {
